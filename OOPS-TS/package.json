@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/01Basics.js",
-    "dev": "tsx src/03Basics.ts"
+    "dev": "tsx src/04Basics.ts"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
