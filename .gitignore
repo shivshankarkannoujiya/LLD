@@ -35,3 +35,68 @@ coverage/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+*.exe
+.exe
+
+# C++ Compiled Object files
+*.o
+*.obj
+*.ko
+*.elf
+
+# C++ Precompiled Headers
+*.gch
+*.pch
+
+# C++ Libraries
+*.lib
+*.a
+*.la
+*.lo
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# C++ Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# C++ Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# C++ Build folders
+build/
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Visual Studio / MSBuild
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
