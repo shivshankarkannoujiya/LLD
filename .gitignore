@@ -100,3 +100,6 @@ Makefile
 *.user
 *.userosscache
 *.sln.docstates
+
+document.txt
+*.txt
