@@ -32,8 +32,12 @@ class PaymentGateway{
 
 
 // Flipkart Codebase
+// NOTE: if we want to support multiple PaymentGateway
+// 
 class Flipkart{
     private:
+        // Make it list: to support the multiple payment gateway
+        // vector<PaymentGateway*> paymentGateways
         PaymentGateway *paymentGateway;
 
     public:
