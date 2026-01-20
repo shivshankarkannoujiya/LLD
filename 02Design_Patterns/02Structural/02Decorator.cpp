@@ -97,3 +97,14 @@ int main(){
     cout << chocoWithOneVanilla->getCost() << endl;
     cout << chocoWithOneVanilla->getConstituents() << endl;
 }
+
+/*
+    NOTE: Usecase: <Interview>
+    - Pizza: Building Pizza Ordering system
+    - Coffee Machine System: 
+                    - Have a coffee decorate with
+                        - Milk
+                        - Chocos etc.
+    - UI Components
+    NOTE: DECORATING THINGS FROM `BELOW` -> `UP`
+*/
