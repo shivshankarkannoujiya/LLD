@@ -141,22 +141,22 @@ int main(){
     // 1. Create different type of BULLET
     // 2. PUT them into BulletRegistry
 
-    BulletRegistry *bulletRegistry = new BulletRegistry();
+    BulletRegistry bulletRegistry;
 
     // 5mm
-    Bullet *FIVE_MM_BULLET = new Bullet();
-    FIVE_MM_BULLET->setBulletType(BulletType::FIVE_MM);
-    bulletRegistry->registerBullet(BulletType::FIVE_MM, *FIVE_MM_BULLET);
+    Bullet fiveMmBullet;
+    fiveMmBullet.setBulletType(BulletType::FIVE_MM);
+    bulletRegistry.registerBullet(BulletType::FIVE_MM, fiveMmBullet);
 
     // 7mm
-    Bullet *SEVEN_MM_BULLET = new Bullet();
-    SEVEN_MM_BULLET->setBulletType(BulletType::SEVEN_MM);
-    bulletRegistry->registerBullet(BulletType::SEVEN_MM, *SEVEN_MM_BULLET);
+    Bullet sevenMMBullet;
+    sevenMMBullet.setBulletType(BulletType::SEVEN_MM);
+    bulletRegistry.registerBullet(BulletType::SEVEN_MM, sevenMMBullet);
 
     // 9mm
-    Bullet *NINE_MM_BULLET = new Bullet();
-    NINE_MM_BULLET->setBulletType(BulletType::NINE_MM);
-    bulletRegistry->registerBullet(BulletType::NINE_MM, *NINE_MM_BULLET);
+    Bullet nineMMBullet;
+    nineMMBullet.setBulletType(BulletType::NINE_MM);
+    bulletRegistry.registerBullet(BulletType::NINE_MM, nineMMBullet);
 
     // Start creating flying bullets
 
@@ -166,8 +166,12 @@ int main(){
         FlyingBullet *flyingBullet = new FlyingBullet();
         flyingBullet->setSpeed(120.0);
         //.... set all Extrinsic properties
-        flyingBullet->setBullet(bulletRegistry->getBullet(BulletType::FIVE_MM));
+        flyingBullet->setBullet(bulletRegistry.getBullet(BulletType::FIVE_MM));
         flyingBullets.push_back(flyingBullet);
+    }
+
+    for (auto *fb : flyingBullets){
+        delete fb;
     }
 
     // NOTE:
